@@ -106,13 +106,13 @@ class plagiarism_plugin_new extends plagiarism_plugin {
     }
 }
 
-function event_file_uploaded($eventdata) {
+function new_event_file_uploaded($eventdata) {
     $result = true;
         //a file has been uploaded - submit this to the plagiarism prevention service.
 
     return $result;
 }
-function event_files_done($eventdata) {
+function new_event_files_done($eventdata) {
     $result = true;
         //mainly used by assignment finalize - used if you want to handle "submit for marking" events
         //a file has been uploaded/finalised - submit this to the plagiarism prevention service.
@@ -120,7 +120,7 @@ function event_files_done($eventdata) {
     return $result;
 }
 
-function event_mod_created($eventdata) {
+function new_event_mod_created($eventdata) {
     $result = true;
         //a new module has been created - this is a generic event that is called for all module types
         //make sure you check the type of module before handling if needed.
@@ -128,7 +128,7 @@ function event_mod_created($eventdata) {
     return $result;
 }
 
-function event_mod_updated($eventdata) {
+function new_event_mod_updated($eventdata) {
     $result = true;
         //a module has been updated - this is a generic event that is called for all module types
         //make sure you check the type of module before handling if needed.
@@ -136,7 +136,7 @@ function event_mod_updated($eventdata) {
     return $result;
 }
 
-function event_mod_deleted($eventdata) {
+function new_event_mod_deleted($eventdata) {
     $result = true;
         //a module has been deleted - this is a generic event that is called for all module types
         //make sure you check the type of module before handling if needed.
